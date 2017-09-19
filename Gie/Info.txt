@@ -1,0 +1,37 @@
+13:38:08 PM : Request - Body Parameters: {
+  "subscriber": "9175690430",
+  "logging": "true"
+}
+13:38:10 PM : Request - URL: https://preprod-api.globe.com.ph/v1/oauth/accessToken
+ Method: POST
+ Headers: System.Collections.Generic.List`1[RestSharp.Parameter]
+13:38:10 PM : Response - 
+        {"developerEmail":"","tokenType":"BearerToken","issuedAt":"1504607889606","accessToken":"LTCcv6nqa84ljfrQLH42Jhy3U0a6","expiresIn":"86399","status":"approved"}
+        
+13:38:14 PM : Request - URL: https://preprod-api.globe.com.ph/v2/billing/subscribers/9175690430/statements?type=outstanding
+ Method: GET
+ Headers: System.Collections.Generic.List`1[RestSharp.Parameter]
+13:38:14 PM : Response - {"getOutstandingBalanceByMsisdnResponse":{"getOutstandingBalanceByMsisdnResult":{"accountBalanceDt":{"arBalance":0,"unappliedAmount":0},"lastPaymentDt":{"amount":843.03,"creditId":175318606,"paymentDate":"2017-08-30T00:00:00+08:00"},"payChannelHeader":{"billingArrangementIdInfo":{"billingArrangementId":333839200},"customerIdInfo":{"customerNo":103713815},"externalIdInfo":{},"payChannelBusinessEntityIdInfo":{"businessEntityId":0},"payChannelDescriptionInfo":{"description":"janica rivera san juan"},"payChannelGeneralInfo":{},"payChannelIdInfo":{"payChannelId":333839200},"payChannelNumberInfo":{"accountNo":96935733,"billingArrangementNo":1,"payChannelNo":1},"payChannelPaymentCategoryInfo":{"paymentCategory":"POST"},"payChannelPaymentMethodInfo":{"bankAccountType":64,"creditCardExpirationDate":"2049-12-31T20:46:50+08:00","creditCardNo":"0000000000000000","creditCardType":"EW","paymentMethod":"CC","paymentType":82,"pin":"0000","recurringAmount":-8577.50588235294,"recurringFrequency":64,"recurringFrequencyValue":-16192},"payChannelStatusInfo":{"openDate":"2013-11-21T17:26:39+08:00","payChannelStatus":79,"statusDate":"2013-11-21T17:26:39+08:00"}},"customerCyclesInfo":{"cycleCodeInfo":{"cycleCode":24,"cycleCloseDay":23,"cycleBillDay":0,"cycleDesc":"Monthly Residential Cycle close on the 23rd","cycleFrequency":77,"cycleFrequencyMultiplier":1,"billingReference":"2005-01-24T00:00:00+08:00","cyclePopulationCode":65,"cyclePopulationDesc":"For Globe","cycleBusinessEntity":0,"billPrdUpLimit":1},"customerIdInfo":{"customerNo":103713815},"cycleMonth":9,"cycleYear":2017,"cycleInstance":9,"cycleSeqNo":20043,"startDate":"2017-08-24T00:00:00+08:00","endDate":"2017-09-23T00:00:00+08:00","status":"OP","customerPartitionId":1},"docInfo":{"docId":307367258,"docType":"BL","docStatus":78,"billDate":"2017-08-25T00:00:00+08:00","cycleControlInfo":{"cycleNo":19703,"cycleCode":24,"cycleYear":2017,"cycleInstance":8,"startDate":"2017-07-24T00:00:00+08:00","endDate":"2017-08-23T00:00:00+08:00","runDate":"2017-08-25T00:00:00+08:00","status":"CN","cycleSeqRun":0,"periodKey":92},"periodCoverageStartDate":"2017-07-24T00:00:00+08:00","periodCoverageEndDate":"2017-08-23T00:00:00+08:00","productionType":"RG","accountNo":96935733,"customerNo":103713815,"baNo":333839200,"documentFormat":{"nil":"true"},"printingCategory":"AR-CSR","docProduceInd":89,"amountCurrency":"PHP","dueDate":"2017-09-13T00:00:00+08:00","totalAmount":843.03,"invoiceAmount":843.03,"invoiceTaxAmount":89.86,"invoiceNetAmount":753.17,"legalInvoiceNo":"96935733-46","billFrequency":1,"rebillActivity":78,"docDemandType":"REGULR"},"overDueBalance":0,"resultNameSpace":"billing"}}}
+13:45:31 PM : Request - Body Parameters: {
+  "subscriber": "9175690430",
+  "logging": "true"
+}
+13:45:34 PM : Request - URL: https://preprod-api.globe.com.ph/v1/oauth/accessToken Method: POST
+ Headers: System.Collections.Generic.List`1[RestSharp.Parameter]
+13:45:34 PM : Response - 
+{"fault":{"faultstring":"There was an error in generating the access token.Check to be sure you are using the correct client key and secret values.","detail":{"errorcode":"401","errormessage":"Generate access token failed"}},"moreinfo" : ""}
+            
+13:45:34 PM : Request - URL: https://preprod-api.globe.com.ph/v2/billing/subscribers/9175690430/statements?type=outstanding
+ Method: GET
+ Headers: System.Collections.Generic.List`1[RestSharp.Parameter]
+13:45:34 PM : Response - {"fault":{"faultstring":"Invalid access token.","detail":{"errorcode":401,"errormessage":"Unauthorized"}},"moreinfo":""}
+13:49:53 PM : Request - Body Parameters:{
+  "subscriber": "9175690430",
+  "logging": "true"
+}
+13:49:55 PM : Request - URL:https://preprod-api.globe.com.ph/v1/oauth/accessToken   Method:POST
+13:49:55 PM : Response - 
+{"fault":{"faultstring":"There was an error in generating the access token.Check to be sure you are using the correct client key and secret values.","detail":{"errorcode":"401","errormessage":"Generate access token failed"}},"moreinfo" : ""}
+            
+13:49:56 PM : Request - URL:https://preprod-api.globe.com.ph/v2/billing/subscribers/9175690430/statements?type=outstanding    Method:GET
+13:49:56 PM : Response - {"fault":{"faultstring":"Invalid access token.","detail":{"errorcode":401,"errormessage":"Unauthorized"}},"moreinfo":""}
