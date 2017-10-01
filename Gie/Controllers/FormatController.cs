@@ -20,11 +20,16 @@ namespace Gie.Controllers
         /// <returns></returns>
         private string buildTextbyXpath(string[] xpath, JObject json)
         {
-            string value;
+            string value ="";
             StringBuilder builder = new StringBuilder("'");
             foreach (string path in xpath)
             {
-                value = findXpath(json, path).ToString();
+                string[] textFields = path.Split('?');
+                if (textFields[0] != "")
+                    value = findXpath(json, textFields[0]).ToString();
+                if (textFields.Count() > 1)
+                    value += " " + textFields[1];
+                
                 builder.Append(value).Append(" ");
             }
             builder.Length--;
@@ -126,7 +131,7 @@ namespace Gie.Controllers
             string imgURL = input["image_url"].ToString();
             string options = input["options"].ToString();
             string key = input["key"].ToString();
-            
+
             try
             {
                 /*var client = new RestClient(jsonURL.ToString());
@@ -143,7 +148,7 @@ namespace Gie.Controllers
                         return BuildMenuFormat(arrayJson, text, subText);
                     default: throw new Exception("The format type is invalid");
                 }
-                
+
             }
             catch (Exception e)
             {
